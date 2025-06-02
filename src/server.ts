@@ -10,6 +10,11 @@ const PORT = 3000;
 // Thêm middleware này VÀO ĐÂY, trước các route hoặc middleware khác
 // để xử lý JSON body của request
 app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("hello");
+});
+
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use("/api", routes);
 
