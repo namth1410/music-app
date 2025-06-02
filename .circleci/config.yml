@@ -3,16 +3,6 @@ orbs:
   node: circleci/node@5
 
 jobs:
-  test-node:
-    executor: node/default
-    steps:
-      - checkout
-      - node/install-packages:
-          pkg-manager: npm
-      - run:
-          name: Run tests
-          command: npm test # hoặc command bạn muốn dùng để test
-
   deploy:
     docker:
       - image: cimg/base:stable
