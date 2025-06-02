@@ -12,7 +12,7 @@ const PORT = 3000;
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("hello");
+  res.send("hello sdf");
 });
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
