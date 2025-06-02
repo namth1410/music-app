@@ -7,10 +7,11 @@ jobs:
     docker:
       - image: cimg/base:stable
     steps:
+      - checkout  # đảm bảo có code để lấy file deploy.sh
       - run:
           name: Deploy to EC2 server
           command: |
-            ssh -v -o StrictHostKeyChecking=no ubuntu@18.234.222.55 'bash -s' < ./deploy.sh
+            ssh -v -o StrictHostKeyChecking=no ubuntu@18.234.222.55 'bash -s' < .circleci/deploy.sh
 
 workflows:
   build-and-deploy:
