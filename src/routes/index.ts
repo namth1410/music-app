@@ -6,7 +6,7 @@ import userRoute from "./userRoute";
 
 const router = express.Router();
 router.get("/hello", (req, res) => {
-  res.send("Hello World");
+  res.send("Hello World asdasd");
 });
 router.use("/auth", authRoute);
 router.use("/song", songRoute);

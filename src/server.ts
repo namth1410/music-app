@@ -11,7 +11,7 @@ const PORT = 3000;
 // để xử lý JSON body của request
 app.use(express.json());
 
-app.get("/hello", (req, res) => {
+app.get("/", (req, res) => {
   res.send("hello");
 });
 
